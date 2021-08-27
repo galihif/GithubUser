@@ -13,12 +13,15 @@ import org.json.JSONObject
 class MainViewModel: ViewModel() {
     val listUsers = MutableLiveData<ArrayList<User>>()
     val user = MutableLiveData<User>()
+    
+    companion object{
+        val token = "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"
+    }
 
     fun getUsers(query:String):LiveData<ArrayList<User>>{
         val listItems = ArrayList<User>()
 
         val url = "https://api.github.com/search/users?q=$query"
-        val token = "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"
 
         val client = AsyncHttpClient()
         client.addHeader("Authorization", "token $token")
@@ -55,7 +58,7 @@ class MainViewModel: ViewModel() {
                 responseBody: ByteArray?,
                 error: Throwable?
             ) {
-                Log.d("onFailure", error?.message.toString())
+                Log.d("MainonFailure", error?.message.toString())
             }
 
         })
@@ -66,7 +69,6 @@ class MainViewModel: ViewModel() {
         val userData = User()
 
         val url = "https://api.github.com/users/$username"
-        val token = "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"
 
         val client = AsyncHttpClient()
         client.addHeader("Authorization", "token $token")
@@ -104,7 +106,7 @@ class MainViewModel: ViewModel() {
                 responseBody: ByteArray?,
                 error: Throwable?
             ) {
-                Log.d("onFailure", error?.message.toString())
+                Log.d("MainonFailure", error?.message.toString())
             }
 
         })

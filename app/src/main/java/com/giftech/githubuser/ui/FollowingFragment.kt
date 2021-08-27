@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.giftech.githubuser.MainViewModel
 import com.giftech.githubuser.adapter.UserAdapter
 import com.giftech.githubuser.databinding.FragmentFollowingBinding
 import com.giftech.githubuser.model.User
@@ -42,7 +43,7 @@ class FollowingFragment(username:String) : Fragment() {
         listFollowing.clear()
 
         val url = "https://api.github.com/users/$username/following"
-        val token = "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"
+        val token = MainViewModel.token
 
         val client = AsyncHttpClient()
         client.addHeader("Authorization", "token $token")
