@@ -25,42 +25,42 @@
             android:layout_marginTop="16dp"
             android:text="Scarlet Johanson"
             android:textColor="@color/black"
-            android:textSize="32dp"
+            android:textSize="24sp"
             android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="scarjo"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/tv_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16sp"
             android:text="Tokopedia"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="Yogyakarta"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="Repositories"
             android:layout_gravity="center"/>
 
@@ -68,10 +68,10 @@
             android:id="@+id/tv_repo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="43"
             android:textColor="@color/black"
-            android:textSize="32sp"
+            android:textSize="24sp"
             android:layout_gravity="center" />
 
         <com.google.android.material.tabs.TabLayout
