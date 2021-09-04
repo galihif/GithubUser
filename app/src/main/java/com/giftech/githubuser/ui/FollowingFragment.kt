@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.giftech.githubuser.MainViewModel
@@ -88,6 +89,12 @@ class FollowingFragment(username:String) : Fragment() {
         binding.rvFollowing.layoutManager = LinearLayoutManager(requireContext())
         val listFollowingAdapter = UserAdapter(listFollowing)
         binding.rvFollowing.adapter = listFollowingAdapter
+
+        listFollowingAdapter.setOnItemCallback(object : UserAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: User) {
+                Toast.makeText(activity,data.userName,Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 }

@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/favourite"
+        android:icon="@drawable/ic_baseline_bookmark_filled_white_24"
+        android:title="Favourites"
+        app:showAsAction="always"/>
+    <item
         android:id="@+id/search"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="Search"
